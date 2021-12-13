@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "Riz"
+          find: "Riz."
 
-          replace: "Vamp"
+          replace: "Vamp."
 
       - name: Create Pull Request
 
