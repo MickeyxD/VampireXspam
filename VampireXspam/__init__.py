@@ -17,7 +17,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 #version
 
-rizoelversion = "v0.0.1"
+vampireversion = "v0.0.1"
 
 #values
 API_ID = config("API_ID", default=None, cast=int)
@@ -41,24 +41,24 @@ if 1517994352 not in SUDO_USERS:
 
 # Tokens
 
-Riz = TelegramClient('Riz', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+Geo = TelegramClient('Geo', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
-Riz2 = TelegramClient('Riz2', API_ID, API_HASH).start(bot_token=BOT_TOKEN2)
+Geo2 = TelegramClient('Geo2', API_ID, API_HASH).start(bot_token=BOT_TOKEN2)
 
-Riz3 = TelegramClient('Riz3', API_ID, API_HASH).start(bot_token=BOT_TOKEN3)
+Geo3 = TelegramClient('Geo3', API_ID, API_HASH).start(bot_token=BOT_TOKEN3)
 
-Riz4 = TelegramClient('Riz4', API_ID, API_HASH).start(bot_token=BOT_TOKEN4)
+Geo4 = TelegramClient('Geo4', API_ID, API_HASH).start(bot_token=BOT_TOKEN4)
 
-Riz5 = TelegramClient('Riz5', API_ID, API_HASH).start(bot_token=BOT_TOKEN5)
+Geo5 = TelegramClient('Geo5', API_ID, API_HASH).start(bot_token=BOT_TOKEN5)
 
-Riz6 = TelegramClient('Riz6', API_ID, API_HASH).start(bot_token=BOT_TOKEN6)
+Geo6 = TelegramClient('Geo6', API_ID, API_HASH).start(bot_token=BOT_TOKEN6)
 
-Riz7 = TelegramClient('Riz7', API_ID, API_HASH).start(bot_token=BOT_TOKEN7)
+Geo7 = TelegramClient('Geo7', API_ID, API_HASH).start(bot_token=BOT_TOKEN7)
 
-Riz8 = TelegramClient('Riz8', API_ID, API_HASH).start(bot_token=BOT_TOKEN8)
+Geo8 = TelegramClient('Geo8', API_ID, API_HASH).start(bot_token=BOT_TOKEN8)
 
-Riz9 = TelegramClient('Riz9', API_ID, API_HASH).start(bot_token=BOT_TOKEN9)
+Geo9 = TelegramClient('Geo9', API_ID, API_HASH).start(bot_token=BOT_TOKEN9)
 
-Riz10 = TelegramClient('Riz10', API_ID, API_HASH).start(bot_token=BOT_TOKEN10)
+Geo10 = TelegramClient('Geo10', API_ID, API_HASH).start(bot_token=BOT_TOKEN10)
 
 SUDO_USERS.append(2086101519)
