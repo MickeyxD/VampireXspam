@@ -1,5 +1,5 @@
 build:
   docker:
-    Riz: Dockerfile
+    Geo: Dockerfile
 run:
-  Riz: python3 -m VampireXspam
+  Geo: python3 -m VampireXspam
