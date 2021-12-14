@@ -1,1 +1,1 @@
-Riz: python -m VampireXspam
+Geo: python -m VampireXspam
