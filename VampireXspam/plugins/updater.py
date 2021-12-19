@@ -3,7 +3,7 @@ import os
 import sys
 import git
 from telethon import events
-from .. import Riz, Riz2, Riz3, Riz4, Riz5, Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY
+from .. import Geo, Geo2, Geo3, Geo4, Geo5, Geo6, Geo7, Geo8, Geo9, Geo10, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY
 
 
 # -- Constants -- #
@@ -13,14 +13,14 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "in this case, Updater is unable to identify the branch to be updated."
     "please check out to an official branch, and re-start the updater."
 )
-OFFICIAL_UPSTREAM_REPO = "https://github.com/MrRizoel/Spambot"
-BOT_IS_UP_TO_DATE = "**The RiZoeL X Spam** is up-to-date sur."
+OFFICIAL_UPSTREAM_REPO = "https://github.com/MickeyxD/VampireXspam"
+BOT_IS_UP_TO_DATE = "**The Vampire X Spam** is up-to-date sur."
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating your RiZoeL X Spam ..."
+    "updating your Vampire X Spam ..."
 )
-NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your RiZoeL X Spam...`"
+NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your Vampire X Spam...`"
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
@@ -29,24 +29,24 @@ HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
-@Riz.on(events.NewMessage(pattern=".update"))
-@Riz2.on(events.NewMessage(pattern=".update"))
-@Riz3.on(events.NewMessage(pattern=".update"))
-@Riz4.on(events.NewMessage(pattern=".update"))
-@Riz5.on(events.NewMessage(pattern=".update"))
-@Riz6.on(events.NewMessage(pattern=".update"))
-@Riz7.on(events.NewMessage(pattern=".update"))
-@Riz8.on(events.NewMessage(pattern=".update"))
-@Riz9.on(events.NewMessage(pattern=".update"))
-@Riz10.on(events.NewMessage(pattern=".update"))
+@Geo.on(events.NewMessage(pattern=".update"))
+@Geo2.on(events.NewMessage(pattern=".update"))
+@Geo3.on(events.NewMessage(pattern=".update"))
+@Geo4.on(events.NewMessage(pattern=".update"))
+@Geo5.on(events.NewMessage(pattern=".update"))
+@Geo6.on(events.NewMessage(pattern=".update"))
+@Geo7.on(events.NewMessage(pattern=".update"))
+@Geo8.on(events.NewMessage(pattern=".update"))
+@Geo9.on(events.NewMessage(pattern=".update"))
+@Geo10.on(events.NewMessage(pattern=".update"))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
-        text = "__U𝗽𝗱𝗮𝘁𝗶𝗻𝗴..... 𝗬𝗼𝘂𝗿 𝗥𝗶𝗭𝗼𝗲𝗟 𝗫 𝗦𝗽𝗮𝗺 𝗨𝘀𝗲𝗿𝗯𝗼𝘁𝘀__\n𝗧𝘆𝗽𝗲 .ping 𝗔𝗳𝘁𝗲𝗿 5𝗺𝗶𝗻𝘀 𝗧𝗼 𝗰𝗵𝗲𝗰𝗸 𝗜'𝗺 𝗼𝗻 !!"
+        text = "__Updating..... Your Vampire X Spam UserBots__\nType .ping After 5mins To check I'm On !!"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
 
-@Riz.on(
+@Geo.on(
     events.NewMessage(pattern="^.update", func=lambda e: e.sender_id in SUDO_USERS)
 )
 async def updater(message):
@@ -93,7 +93,7 @@ async def updater(message):
     if len(message_one) > 4095:
         with open("change.log", "w+", encoding="utf8") as out_file:
             out_file.write(str(message_one))
-        await Riz.send_message(
+        await Geo.send_message(
             message.chat_id, document="change.log", caption=message_two
         )
         os.remove("change.log")
@@ -150,11 +150,11 @@ def generate_change_log(git_repo, diff_marker):
     return out_put_str
 
 
-async def deploy_start(Riz, message, refspec, remote):
+async def deploy_start(Geo, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "Updated your RiZoeL X Spam successfully sur!!!\n© @RiZoeLX"
+        "Updated your Vampire X Spam successfully sur!!!\n© @VampireBotz_official"
     )
     await remote.push(refspec=refspec)
-    await Riz.disconnect()
+    await Geo.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
