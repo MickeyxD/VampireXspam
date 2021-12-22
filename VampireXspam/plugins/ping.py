@@ -1,6 +1,6 @@
 
 
-from .. import Riz, Riz2, Riz3, Riz4, Riz5 , Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS
+from .. import Geo, Geo2, Geo3, Geo4, Geo5 , Geo6, Geo7, Geo8, Geo9, Geo10, SUDO_USERS
 from telethon import events
 from time import time
 from datetime import datetime
@@ -33,16 +33,16 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-@Riz.on(events.NewMessage(pattern=".ping"))
-@Riz2.on(events.NewMessage(pattern=".ping"))
-@Riz3.on(events.NewMessage(pattern=".ping"))
-@Riz4.on(events.NewMessage(pattern=".ping"))
-@Riz5.on(events.NewMessage(pattern=".ping"))
-@Riz6.on(events.NewMessage(pattern=".ping"))
-@Riz7.on(events.NewMessage(pattern=".ping"))
-@Riz8.on(events.NewMessage(pattern=".ping"))
-@Riz9.on(events.NewMessage(pattern=".ping"))
-@Riz10.on(events.NewMessage(pattern=".ping"))
+@Geo.on(events.NewMessage(pattern=".ping"))
+@Geo2.on(events.NewMessage(pattern=".ping"))
+@Geo3.on(events.NewMessage(pattern=".ping"))
+@Geo4.on(events.NewMessage(pattern=".ping"))
+@Geo5.on(events.NewMessage(pattern=".ping"))
+@Geo6.on(events.NewMessage(pattern=".ping"))
+@Geo7.on(events.NewMessage(pattern=".ping"))
+@Geo8.on(events.NewMessage(pattern=".ping"))
+@Geo9.on(events.NewMessage(pattern=".ping"))
+@Geo10.on(events.NewMessage(pattern=".ping"))
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
