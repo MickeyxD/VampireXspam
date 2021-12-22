@@ -22,4 +22,4 @@
  .delayspam - this cmd use for delay spam
  .uspam - this cmd use for unlimited spam
  
-© @TheVampireBotz | @VampireBot_Support
+© @VampireBotz_official | @VampireBot_Support
