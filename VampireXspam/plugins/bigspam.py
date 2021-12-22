@@ -19,29 +19,29 @@ import os
 from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from .. import Riz, Riz2, Riz3, Riz4, Riz5 , Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS
+from .. import Geo, Geo2, Geo3, Geo4, Geo5 , Geo6, Geo7, Geo8, Geo9, Geo10, SUDO_USERS
 
 
-@Riz.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz2.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz3.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz4.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz5.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz6.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz7.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz8.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz9.on(events.NewMessage(pattern=r"\.bigspam"))
-@Riz10.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo2.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo3.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo4.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo5.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo6.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo7.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo8.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo9.on(events.NewMessage(pattern=r"\.bigspam"))
+@Geo10.on(events.NewMessage(pattern=r"\.bigspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        vampire = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(rizoel) == 2:
-            message = str(rizoel[1])
-            counter = int(rizoel[0])
+        if len(vampire) == 2:
+            message = str(vampire[1])
+            counter = int(vampire[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
