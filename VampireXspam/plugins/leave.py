@@ -1,5 +1,5 @@
 import asyncio
-from .. import Riz, Riz2, Riz3, Riz4, Riz5, Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS
+from .. import Geo, Geo2, Geo3, Geo4, Geo5, Geo6, Geo7, Geo8, Geo9, Geo10, SUDO_USERS
 import telethon.utils
 from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
@@ -8,22 +8,22 @@ import os
 import random
 import sys
     
-@Riz.on(events.NewMessage(pattern=".leave"))
-@Riz2.on(events.NewMessage(pattern=".leave"))
-@Riz3.on(events.NewMessage(pattern=".leave"))
-@Riz4.on(events.NewMessage(pattern=".leave"))
-@Riz5.on(events.NewMessage(pattern=".leave"))
-@Riz6.on(events.NewMessage(pattern=".leave"))
-@Riz7.on(events.NewMessage(pattern=".leave"))
-@Riz8.on(events.NewMessage(pattern=".leave"))
-@Riz9.on(events.NewMessage(pattern=".leave"))
-@Riz10.on(events.NewMessage(pattern=".leave"))
+@Geo.on(events.NewMessage(pattern=".leave"))
+@Geo2.on(events.NewMessage(pattern=".leave"))
+@Geo3.on(events.NewMessage(pattern=".leave"))
+@Geo4.on(events.NewMessage(pattern=".leave"))
+@Geo5.on(events.NewMessage(pattern=".leave"))
+@Geo6.on(events.NewMessage(pattern=".leave"))
+@Geo7.on(events.NewMessage(pattern=".leave"))
+@Geo8.on(events.NewMessage(pattern=".leave"))
+@Geo9.on(events.NewMessage(pattern=".leave"))
+@Geo10.on(events.NewMessage(pattern=".leave"))
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
     if e.sender_id in SUDO_USERS:
-        rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        vampire = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
-            bc = rizoel[0]
+            bc = vampire[0]
             bc = int(bc)
             text = "Leaving....."
             event = await e.reply(text, parse_mode=None, link_preview=None )
