@@ -4,19 +4,19 @@ import os
 from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from .. import Riz, Riz2, Riz3, Riz4, Riz5 , Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS
+from .. import Geo, Geo2, Geo3, Geo4, Geo5 , Geo6, Geo7, Geo8, Geo9, Geo10, SUDO_USERS
 
 
-@Riz.on(events.NewMessage(pattern=".uspam"))
-@Riz2.on(events.NewMessage(pattern=".uspam"))
-@Riz3.on(events.NewMessage(pattern=".uspam"))
-@Riz4.on(events.NewMessage(pattern=".uspam"))
-@Riz5.on(events.NewMessage(pattern=".uspam"))
-@Riz6.on(events.NewMessage(pattern=".uspam"))
-@Riz7.on(events.NewMessage(pattern=".uspam"))
-@Riz8.on(events.NewMessage(pattern=".uspam"))
-@Riz9.on(events.NewMessage(pattern=".uspam"))
-@Riz10.on(events.NewMessage(pattern=".uspam"))
+@Geo.on(events.NewMessage(pattern=".uspam"))
+@Geo2.on(events.NewMessage(pattern=".uspam"))
+@Geo3.on(events.NewMessage(pattern=".uspam"))
+@Geo4.on(events.NewMessage(pattern=".uspam"))
+@Geo5.on(events.NewMessage(pattern=".uspam"))
+@Geo6.on(events.NewMessage(pattern=".uspam"))
+@Geo7.on(events.NewMessage(pattern=".uspam"))
+@Geo8.on(events.NewMessage(pattern=".uspam"))
+@Geo9.on(events.NewMessage(pattern=".uspam"))
+@Geo10.on(events.NewMessage(pattern=".uspam"))
 async def unlimitedspam(event):
   if event.sender_id in SUDO_USERS:
     try:
@@ -26,4 +26,4 @@ async def unlimitedspam(event):
         await event.client.send_message(event.chat, op)
         await asyncio.sleep(0.3)
     except Exception as e:
-      await event.reply("Oops!! Something went wrong, Report In @DNHxHELl\n\n" + str(e))
+      await event.reply("Oops!! Something went wrong, Report In @VampireBotz_support\n\n" + str(e))
